@@ -14,7 +14,29 @@
         <h1>Medicine Tracker</h1>
     </header>
     <main>
-
+        <section class="form-section">
+            <form id="createForm" onsubmit="handleCreate(event)">
+                <h3>Add New Medicine</h3>
+                <input type="text" name="name" placeholder="Medicine name" required>
+                <input type="number" name="price" step="0.01" placeholder="Price" required>
+                <button type="submit">Add Medicine</button>
+            </form>
+    
+            <form id="updateForm" onsubmit="handleUpdate(event)">
+                <h3>Update Medicine</h3>
+                <select name="name" required></select>
+                <input type="number" name="price" step="0.01" placeholder="New price" required>
+                <button type="submit">Update Price</button>
+            </form>
+    
+            <form id="deleteForm" onsubmit="handleDelete(event)">
+                <h3>Delete Medicine</h3>
+                <select name="name" required></select>
+                <button type="submit" class="danger">Delete Medicine</button>
+            </form>
+        </section>
+    
+        <section class="medicine-grid"></section>
     </main>
     <script src="script.js"></script>
 </body>
