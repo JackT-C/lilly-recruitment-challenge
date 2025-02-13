@@ -31,54 +31,150 @@ body {
 
 /* ---- Your custom styles below ---- */
 
+/* Header Styling */
 header {
-    background: hsl(180, 2%, 32%);
+    background: #333333; /* Stylish grey */
     color: white;
-    padding: 2rem;
+    padding: 1.5rem;
     text-align: center;
+    font-size: 1.75rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Main container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Section headings */
+h2, h3 {
+    color: #333333;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+}
+
+/* Form Section */
+.form-section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.form-section:hover {
+    transform: translateY(-3px);
+}
+
+/* Form group styling */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: #475569;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Buttons */
+button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: #3b82f6;
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #2563eb;
+}
+
+button.danger {
+    background: #ef4444;
+}
+
+button.danger:hover {
+    background: #dc2626;
+}
+
+/* Medicine List */
+.medicine-list-container {
     margin-bottom: 2rem;
 }
 
-.form-section {
-    max-width: 800px;
-    margin: 0 auto 2rem;
-    padding: 2rem;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+#list {
+    list-style: none;
+    padding: 0;
 }
 
-.medicine-grid {
-    display: grid;
-    gap: 1.5rem;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    padding: 2rem;
+#list li {
+    padding: 0.75rem;
+    background: #f3f4f6;
+    margin-bottom: 0.5rem;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1rem;
+    color: #475569;
 }
 
-.medicine-card {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    transition: transform 0.2s;
-}
 
-.medicine-card:hover {
-    transform: translateY(-5px);
-}
-
+/* Notification Styling */
 .notification {
     position: fixed;
     bottom: 20px;
     right: 20px;
     padding: 1rem 2rem;
-    border-radius: 8px;
+    border-radius: 10px;
     color: white;
+    font-weight: 500;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.5s ease-in-out;
 }
 
-.notification.success { background: #4CAF50; }
-.notification.error { background: #f44336; }
+.notification.success {
+    background: #16a34a;
+}
 
-.danger {
-    background: #f44336 !important;
+.notification.error {
+    background: #ef4444;
+}
+
+/* Fade-in animation for notifications */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

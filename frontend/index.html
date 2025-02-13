@@ -3,41 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Medicine Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="disclaimer" id="disclaimer">
         Disclaimer: All medicine names and prices used in this application are fictional and do not represent any real medicine(s).
     </div>
+    
     <header>
         <h1>Medicine Tracker</h1>
     </header>
-    <main>
-        <section class="form-section">
-            <form id="createForm" onsubmit="handleCreate(event)">
-                <h3>Add New Medicine</h3>
-                <input type="text" name="name" placeholder="Medicine name" required>
-                <input type="number" name="price" step="0.01" placeholder="Price" required>
-                <button type="submit">Add Medicine</button>
-            </form>
-    
-            <form id="updateForm" onsubmit="handleUpdate(event)">
-                <h3>Update Medicine</h3>
-                <select name="name" required></select>
-                <input type="number" name="price" step="0.01" placeholder="New price" required>
-                <button type="submit">Update Price</button>
-            </form>
-    
-            <form id="deleteForm" onsubmit="handleDelete(event)">
-                <h3>Delete Medicine</h3>
-                <select name="name" required></select>
-                <button type="submit" class="danger">Delete Medicine</button>
-            </form>
+
+    <main class="container">
+
+        <section id="list-of-medicines">
+            <h2>Medicines List</h2>
+
+            <section id="search-section">
+                <input type="text" id="search-bar" placeholder="Search for a medicine..." aria-label="Search for a medicine">
+            </section>
+            
+            <div class="medicine-list-container">
+                <ul id="list" aria-live="polite"></ul>
+            </div>
         </section>
-    
-        <section class="medicine-grid"></section>
+
+        <section class="forms-container">
+
+            <div id="add-medicine-form">
+                <h3>Add New Medicine</h3>
+                <form id="medicine-form">
+
+                    <div class="form-group">
+                        <label for="medicine-name">Name:</label>
+                        <input type="text" id="medicine-name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="medicine-price">Price:</label>
+                        <input type="number" id="medicine-price" name="price" step="0.01" min="0" required>
+                    </div>
+
+                    <button type="submit">Add Medicine</button>
+
+                </form>
+            </div>
+            
+            <div id="update-medicine-form">
+                <h3>Update Medicine Price</h3>
+                <form id="update-form">
+
+                    <div class="form-group">
+                        <label for="update-name">Name:</label>
+                        <input type="text" id="update-name" name="name" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="update-price">New Price:</label>
+                        <input type="number" id="update-price" name="price" step="0.01" min="0" required>
+                    </div>
+
+                    <button type="submit">Update Medicine</button>
+
+                </form>
+            </div>
+
+            <div id="delete-medicine-form">
+                <h3>Delete Medicine</h3>
+                <form id="delete-form">
+
+                    <div class="form-group">
+                        <label for="delete-name">Name:</label>
+                        <input type="text" id="delete-name" name="name" required>
+                    </div>
+
+                    <button type="submit">Delete Medicine</button>
+
+                </form>
+            </div>
+
+            <div id="calculate-average-form">
+                <h3>Calculate Average Price</h3>
+                <button id="calculate-average">Calculate</button>
+                <p id="average-price-display" aria-live="polite"></p>
+            </div>
+
+        </section>
+
     </main>
+
     <script src="script.js"></script>
 </body>
 </html>
