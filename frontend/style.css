@@ -93,7 +93,7 @@ h2, h3 {
 }
 
 .form-group input:focus, .form-group select:focus {
-    border-color: #3b82f6;
+    border-color: #f63b3b;
     outline: none;
     box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
 }
@@ -102,7 +102,7 @@ h2, h3 {
 button {
     display: inline-block;
     padding: 0.75rem 1.5rem;
-    background: #3b82f6;
+    background: #f63b3b;
     color: white;
     font-weight: 500;
     border: none;
@@ -112,7 +112,7 @@ button {
 }
 
 button:hover {
-    background: #2563eb;
+    background: #eb2525;
 }
 
 button.danger {
