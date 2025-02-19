@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     /**
      * Function to update an existing medicine.
-     * Sends a POST request to `/update` with the updated name and price.
+     * Sends a PUT request to `/update` with the updated name and price.
      */
     async function update_medicine(event) {
         event.preventDefault();  // Prevent form submission from refreshing the page
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', () => {
     
         try {
             const response = await fetch('http://localhost:8000/update', {
-                method: 'POST',
+                method: 'PUT',
                 body: formData  // Sending form data instead of JSON
             });
 
