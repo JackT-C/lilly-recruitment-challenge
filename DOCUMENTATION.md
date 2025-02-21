@@ -6,11 +6,13 @@ I approached this challenge by first analyzing the objectives set out in the REA
 
 I started by setting up my environment, ensuring that all dependencies were installed, and launching the provided start.bat file to start the backend.
 
-After this, my main focus was ensuring that the frontend could successfully communicate with the backend, retrieve data from the data.json file, and display it correctly. To achieve this, I used various HTTP methods:
+After this, my main focus was ensuring that the frontend could successfully communicate with the backend, retrieve data from the data.json file, and display it correctly. To achieve this, I used various HTTP methods to allow CRUD (Create, Read, Update, Delete) operations:
 
 GET: Retrieve all items from the JSON file.
 
-POST: Update and create medicines.
+POST: Create medicines.
+
+PUT: Update Medicines
 
 DELETE: Remove a medicine.
 
